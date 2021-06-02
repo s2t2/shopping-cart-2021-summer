@@ -61,3 +61,12 @@ print("WE HAVE REACHED THE END OF THE LOOP")
 
 # 2) Perform product lookups to determine what the product's name and price are
 #selected_ids = ["1","2","3","2","1"]
+
+for selected_id in selected_ids:
+    #print(selected_id)
+    # lookup the corresponding product!
+    # ... and display the selected product's name and price
+    matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
+    # FYI the result of our list comprehension will be a list!
+    matching_product = matching_products[0] # ... so we'll need to access its first item using [0]
+    print(matching_product["name"], matching_product["price"])
